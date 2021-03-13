@@ -32,7 +32,9 @@ android {
 }
 
 dependencies {
+    implementation project(":common")
     implementation project(":designsystem")
+    implementation project(":network")
 
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
@@ -42,6 +44,16 @@ dependencies {
 
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation_fragment_version"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_ui_version"
+
+    // Koin Implementation
+    implementation "org.koin:koin-android:$koin_version"
+
+    // Retrofit Implementation
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+
+    // Coroutines
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$coroutines_version"
 
     testImplementation "junit:junit:$junit_version"
 

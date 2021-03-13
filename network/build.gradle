@@ -12,7 +12,6 @@ android {
         versionCode app_version_code
         versionName app_version_name
 
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -34,8 +33,20 @@ android {
 
 dependencies {
 
+    implementation project(":common")
+
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
     implementation "androidx.core:core-ktx:$core_ktx_version"
     implementation "com.google.android.material:material:$material_version"
+
+    // Retrofit Implementation
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_logging_version"
+
+    // Koin Implementation
+    implementation "org.koin:koin-android:$koin_version"
+
+    testImplementation "junit:junit:$junit_version"
 }
