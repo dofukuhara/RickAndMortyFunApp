@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_bottom_nav_character_item">Character</string>
+    <string name="main_bottom_nav_location_item">Location</string>
+    <string name="main_bottom_nav_episode_item">Episode</string>
+</resources>

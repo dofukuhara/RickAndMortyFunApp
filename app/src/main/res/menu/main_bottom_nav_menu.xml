@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_bottom_nav_item_character"
+        android:icon="@drawable/char_bottom_menu_icon"
+        android:title="@string/main_bottom_nav_character_item" />
+
+    <item
+        android:id="@+id/main_bottom_nav_item_episode"
+        android:icon="@drawable/episode_bottom_menu_icon"
+        android:title="@string/main_bottom_nav_episode_item" />
+
+    <item
+        android:id="@+id/main_bottom_nav_item_location"
+        android:icon="@drawable/location_bottom_menu_icon"
+        android:title="@string/main_bottom_nav_location_item" />
+
+</menu>

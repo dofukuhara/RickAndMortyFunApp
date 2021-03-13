@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/main_bottom_nav_item_episode">
+
+    <fragment
+        android:id="@+id/main_bottom_nav_item_character"
+        android:name="com.fukuhara.rickandmortyfunapp.PlaceholderFrag"
+        android:label="@string/main_bottom_nav_character_item" />
+    <fragment
+        android:id="@+id/main_bottom_nav_item_location"
+        android:name="com.fukuhara.rickandmortyfunapp.PlaceholderFrag"
+        android:label="@string/main_bottom_nav_location_item" />
+    <fragment
+        android:id="@+id/main_bottom_nav_item_episode"
+        android:name="com.fukuhara.rickandmortyfunapp.PlaceholderFrag"
+        android:label="@string/main_bottom_nav_episode_item" />
+
+</navigation>
