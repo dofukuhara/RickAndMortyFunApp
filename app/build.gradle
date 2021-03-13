@@ -47,6 +47,7 @@ dependencies {
 
     // Koin Implementation
     implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
 
     // Retrofit Implementation
     implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
@@ -54,6 +55,8 @@ dependencies {
 
     // Coroutines
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$coroutines_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$coroutines_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$coroutines_version"
 
     testImplementation "junit:junit:$junit_version"
 
