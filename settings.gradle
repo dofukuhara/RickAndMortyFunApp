@@ -1,2 +1,3 @@
+include ':designsystem'
 include ':app'
 rootProject.name = "RickAndMortyFunApp"
