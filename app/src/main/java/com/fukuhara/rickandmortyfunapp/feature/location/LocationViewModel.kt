@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fukuhara.common.arch.Either
-import com.fukuhara.rickandmortyfunapp.common.PageIndicator
+import com.fukuhara.common.data.PageIndicator
 import com.fukuhara.rickandmortyfunapp.feature.location.business.LocationRepository
 import com.fukuhara.rickandmortyfunapp.feature.location.business.LocationResultModel
 import kotlinx.coroutines.CoroutineDispatcher

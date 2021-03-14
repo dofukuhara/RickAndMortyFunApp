@@ -1,4 +1,4 @@
-package com.fukuhara.rickandmortyfunapp.feature.episode
+package com.fukuhara.rickandmortyfunapp.feature.character
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,14 +6,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fukuhara.common.arch.Either
 import com.fukuhara.common.data.PageIndicator
-import com.fukuhara.rickandmortyfunapp.feature.episode.business.EpisodeRepository
-import com.fukuhara.rickandmortyfunapp.feature.episode.business.EpisodeResultModel
+import com.fukuhara.rickandmortyfunapp.feature.character.business.CharacterRepository
+import com.fukuhara.rickandmortyfunapp.feature.character.business.CharacterResultModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class EpisodeViewModel(
-    private val repository: EpisodeRepository,
+class CharacterViewModel(
+    private val repository: CharacterRepository,
     private val backgroundDispatcher: CoroutineDispatcher
 ) : ViewModel() {
 
@@ -29,9 +29,9 @@ class EpisodeViewModel(
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String> = _errorMessage
 
-    // Store List of Episodes
-    private val _episodeList = MutableLiveData<List<EpisodeResultModel>>()
-    val episodeList: LiveData<List<EpisodeResultModel>> = _episodeList
+    // Store List of Characters
+    private val _characterList = MutableLiveData<List<CharacterResultModel>>()
+    val characterList: LiveData<List<CharacterResultModel>> = _characterList
 
     // Handle Next Button State and Destination
     private val _nextPage = MutableLiveData<String>()
@@ -54,25 +54,26 @@ class EpisodeViewModel(
 
     fun getData(pageIndex: String = "1") {
         currentPageIndexFetch = pageIndex
+
         viewModelScope.launch {
             _loadingState.value = true
 
-            val episodeResult = withContext(backgroundDispatcher) {
+            val characterResult = withContext(backgroundDispatcher) {
                 repository.getData(pageIndex)
             }
 
             _loadingState.value = false
 
-            when (episodeResult) {
+            when(characterResult) {
                 is Either.Left -> {
                     _isErrorState.value = true
-                    _errorMessage.value = episodeResult.exception.message
+                    _errorMessage.value = characterResult.exception.message
                 }
-                is Either.Right -> {
+                is  Either.Right -> {
                     _isErrorState.value = false
 
-                    episodeResult.data.run {
-                        _episodeList.value = this.results
+                    characterResult.data.run {
+                        _characterList.value = this.results
 
                         this.info.next?.let {
                             _nextPage.value = it

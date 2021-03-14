@@ -1,4 +1,4 @@
-package com.fukuhara.rickandmortyfunapp
+package com.fukuhara.rickandmortyfunapp.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.fukuhara.rickandmortyfunapp.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +25,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupActionBar(navController: NavController) {
         val appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.main_bottom_nav_item_character, R.id.main_bottom_nav_item_episode, R.id.main_bottom_nav_item_location)
+            setOf(
+                R.id.main_bottom_nav_item_character,
+                R.id.main_bottom_nav_item_episode,
+                R.id.main_bottom_nav_item_location
+            )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
     }

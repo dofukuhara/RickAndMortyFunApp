@@ -9,4 +9,13 @@
 
     <string name="ds_location_card_type_label">"Type: "</string>
     <string name="ds_location_card_dimension_label">"Dimension: "</string>
+
+    <string name="ds_character_card_name_label">"Name: "</string>
+    <string name="ds_character_card_status_label">"Status: "</string>
+    <string name="ds_character_card_species_label">"Species: "</string>
+    <string name="ds_character_card_type_label">"Type: "</string>
+    <string name="ds_character_card_gender_label">"Gender: "</string>
+    <string name="ds_character_card_origin_label">"From: "</string>
+    <string name="ds_character_card_location_label">"Last Known Location: "</string>
+    <string name="ds_character_card_avatar_image_desc">Avatar image</string>
 </resources>

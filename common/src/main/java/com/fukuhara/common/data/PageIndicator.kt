@@ -1,4 +1,4 @@
-package com.fukuhara.rickandmortyfunapp.common
+package com.fukuhara.common.data
 
 data class PageIndicator(
     val currentPage: String,

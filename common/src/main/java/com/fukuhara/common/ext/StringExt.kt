@@ -1,9 +1,5 @@
 package com.fukuhara.common.ext
 
-import android.content.Context
-import android.content.res.Resources
-import com.fukuhara.common.R
-
 /*
     Given a String with the following pattern : .*<API_NAME>/?page=(\d+), as in example below:
         https://rickandmortyapi.com/api/character/?page=2

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/main_bottom_nav_item_character"
-        android:name="com.fukuhara.rickandmortyfunapp.PlaceholderFrag"
+        android:name="com.fukuhara.rickandmortyfunapp.feature.character.CharacterFragment"
         android:label="@string/main_bottom_nav_character_item" />
     <fragment
         android:id="@+id/main_bottom_nav_item_episode"

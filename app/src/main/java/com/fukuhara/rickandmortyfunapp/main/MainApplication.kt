@@ -1,4 +1,4 @@
-package com.fukuhara.rickandmortyfunapp
+package com.fukuhara.rickandmortyfunapp.main
 
 import android.app.Application
 import com.fukuhara.common.provider.di.CommonModule

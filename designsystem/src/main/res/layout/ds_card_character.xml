@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/ds_episode_card_corner"
+    app:contentPadding="@dimen/ds_episode_card_content_padding"
+    android:layout_marginTop="@dimen/ds_margin_top_standard"
+    android:layout_marginBottom="@dimen/ds_margin_bottom_standard"
+    android:layout_marginStart="@dimen/ds_margin_start_standard"
+    android:layout_marginEnd="@dimen/ds_margin_end_standard"
+    style="@style/CardView.Light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ds_character_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/ds_character_card_avatar_image_desc"/>
+
+        <TextView
+            android:id="@+id/ds_character_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintEnd_toStartOf="@+id/ds_character_name"
+            android:text="@string/ds_character_card_name_label" />
+
+        <TextView
+            android:id="@+id/ds_character_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ds_character_name_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Rick Sanchez" />
+
+        <TextView
+            android:id="@+id/ds_character_status_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_name"
+            app:layout_constraintStart_toEndOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintEnd_toStartOf="@+id/ds_character_status"
+            android:text="@string/ds_character_card_status_label" />
+
+        <TextView
+            android:id="@+id/ds_character_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_name"
+            app:layout_constraintStart_toEndOf="@id/ds_character_status_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Alive" />
+
+        <TextView
+            android:id="@+id/ds_character_species_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_status"
+            app:layout_constraintStart_toEndOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintEnd_toStartOf="@+id/ds_character_species"
+            android:text="@string/ds_character_card_species_label" />
+
+        <TextView
+            android:id="@+id/ds_character_species"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_status"
+            app:layout_constraintStart_toEndOf="@id/ds_character_species_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Human" />
+
+        <TextView
+            android:id="@+id/ds_character_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_species_label"
+            app:layout_constraintStart_toEndOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintEnd_toStartOf="@+id/ds_character_type"
+            android:text="@string/ds_character_card_type_label" />
+
+        <TextView
+            android:id="@+id/ds_character_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_species"
+            app:layout_constraintStart_toEndOf="@id/ds_character_type_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Character Type" />
+
+        <TextView
+            android:id="@+id/ds_character_gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_type_label"
+            app:layout_constraintStart_toEndOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintEnd_toStartOf="@+id/ds_character_gender"
+            android:text="@string/ds_character_card_gender_label" />
+
+        <TextView
+            android:id="@+id/ds_character_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_type"
+            app:layout_constraintStart_toEndOf="@id/ds_character_gender_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Male" />
+
+        <TextView
+            android:id="@+id/ds_character_origin_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_gender_label"
+            app:layout_constraintStart_toEndOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/ds_character_card_origin_label" />
+
+        <TextView
+            android:id="@+id/ds_character_origin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_origin_label"
+            app:layout_constraintStart_toEndOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Earth (C-137)" />
+
+        <TextView
+            android:id="@+id/ds_character_location_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_origin"
+            app:layout_constraintStart_toEndOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/ds_character_card_location_label" />
+
+        <TextView
+            android:id="@+id/ds_character_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ds_character_location_label"
+            app:layout_constraintStart_toEndOf="@id/ds_character_guideline_image_bound"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Earth (Replacement Dimension)" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ds_character_guideline_image_bound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

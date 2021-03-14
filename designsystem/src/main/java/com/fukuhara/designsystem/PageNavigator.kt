@@ -30,6 +30,9 @@ class PageNavigator(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
             pageIndicatorText = view.findViewById(R.id.ds_pageindicator_page_info_text)
             viewGroup = view.findViewById(R.id.ds_pageindicator_view_group)
 
+            setLeftButtonVisibility(false)
+            setRightButtonVisibility(false)
+
             setAttributes(it)
         }
     }
