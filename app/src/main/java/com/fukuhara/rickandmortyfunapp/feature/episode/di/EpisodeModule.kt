@@ -23,7 +23,8 @@ object EpisodeModule {
         factory<EpisodeRepository> {
             EpisodeRepositoryImpl(
                 api = get(),
-                modelMapper = get()
+                modelMapper = get(),
+                networkErrorHandler = get()
             )
         }
 

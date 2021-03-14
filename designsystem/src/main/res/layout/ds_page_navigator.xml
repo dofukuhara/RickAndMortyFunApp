@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Button
+        android:id="@+id/ds_pageindicator_left_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ds_pageindicator_page_info_text"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:text="@string/ds_page_nagivator_previous_button_label"/>
+
+    <TextView
+        android:id="@+id/ds_pageindicator_page_info_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ds_pageindicator_left_button"
+        app:layout_constraintEnd_toStartOf="@id/ds_pageindicator_right_button"
+        app:layout_constraintBaseline_toBaselineOf="@id/ds_pageindicator_left_button"
+        android:gravity="center"
+        android:text="@string/ds_page_navigator_page_index_text_default"
+        tools:text="Page 1 of 3"/>
+
+    <Button
+        android:id="@+id/ds_pageindicator_right_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ds_pageindicator_page_info_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/ds_page_nagivator_next_button_label"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/ds_pageindicator_view_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ds_pageindicator_left_button,
+        ds_pageindicator_page_info_text, ds_pageindicator_right_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

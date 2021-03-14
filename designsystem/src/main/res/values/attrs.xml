@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PageNavigator">
+        <attr name="leftButtonEnable" format="boolean" />
+        <attr name="rightButtonEnable" format="boolean" />
+        <attr name="pageIndicatorText" format="string" />
+    </declare-styleable>
+</resources>

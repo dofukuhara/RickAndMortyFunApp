@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ds_page_nagivator_previous_button_label">Previous</string>
+    <string name="ds_page_nagivator_next_button_label">Next</string>
+    <string name="ds_page_navigator_page_index_text_default" />
+    <string name="ds_page_navigator_page_index_text">Page %1$s of %2$s</string>
+    <string name="ds_error_feedback_retry_button_label">Try Again</string>
+</resources>

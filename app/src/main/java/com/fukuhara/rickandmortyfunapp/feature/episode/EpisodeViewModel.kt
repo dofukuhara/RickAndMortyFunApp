@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fukuhara.common.arch.Either
+import com.fukuhara.rickandmortyfunapp.common.PageIndicator
 import com.fukuhara.rickandmortyfunapp.feature.episode.business.EpisodeRepository
 import com.fukuhara.rickandmortyfunapp.feature.episode.business.EpisodeResultModel
 import kotlinx.coroutines.CoroutineDispatcher
@@ -15,6 +16,8 @@ class EpisodeViewModel(
     private val repository: EpisodeRepository,
     private val backgroundDispatcher: CoroutineDispatcher
 ) : ViewModel() {
+
+    private var currentPageIndexFetch = "1"
 
     // Handle Loading/Progress State
     private val _loadingState = MutableLiveData<Boolean>()
@@ -42,7 +45,15 @@ class EpisodeViewModel(
     private val _previousPageState = MutableLiveData<Boolean>()
     val previousPageState: LiveData<Boolean> = _previousPageState
 
+    private val _pageIndicator = MutableLiveData<PageIndicator>()
+    val pageIndicator: LiveData<PageIndicator> = _pageIndicator
+
+    fun refresh() {
+        getData(currentPageIndexFetch)
+    }
+
     fun getData(pageIndex: String = "1") {
+        currentPageIndexFetch = pageIndex
         viewModelScope.launch {
             _loadingState.value = true
 
@@ -59,6 +70,7 @@ class EpisodeViewModel(
                 }
                 is Either.Right -> {
                     _isErrorState.value = false
+
                     episodeResult.data.run {
                         _episodeList.value = this.results
 
@@ -75,6 +87,8 @@ class EpisodeViewModel(
                         } ?: run {
                             _previousPageState.value = false
                         }
+
+                        _pageIndicator.value = PageIndicator(pageIndex, this.info.pages.toString())
                     }
                 }
             }
