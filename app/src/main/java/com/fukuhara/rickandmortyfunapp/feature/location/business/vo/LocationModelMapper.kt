@@ -8,7 +8,7 @@ import com.fukuhara.rickandmortyfunapp.feature.location.business.LocationResultM
 
 class LocationModelMapper : ModelMapper<LocationVo, LocationModel> {
 
-    override fun transform(voData: LocationVo): LocationModel {
+    override fun transform(voData: LocationVo, pageIndex: String): LocationModel {
         val nextIndex = voData.info.next?.getPageIndex("location")
         val previousIndex = voData.info.prev?.getPageIndex("location")
 
@@ -25,6 +25,6 @@ class LocationModelMapper : ModelMapper<LocationVo, LocationModel> {
             )
         }
 
-        return LocationModel(locationInfoModel, locationResultList)
+        return LocationModel(locationInfoModel, locationResultList, pageIndex)
     }
 }

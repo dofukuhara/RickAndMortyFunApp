@@ -25,6 +25,7 @@ object EpisodeModule {
         factory<EpisodeRepository> {
             EpisodeRepositoryImpl(
                 api = get(),
+                dao = get(),
                 modelMapper = get(named(MODEL_MAPPER_EPISODE)),
                 networkErrorHandler = get()
             )

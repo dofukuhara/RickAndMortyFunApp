@@ -5,5 +5,5 @@ package com.fukuhara.common.arch
     into a Model object, that the View will consume
  */
 interface ModelMapper<IN, OUT> {
-    fun transform(voData: IN) : OUT
+    fun transform(voData: IN, pageIndex: String) : OUT
 }

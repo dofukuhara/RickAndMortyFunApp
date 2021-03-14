@@ -1,8 +1,15 @@
 package com.fukuhara.rickandmortyfunapp.feature.character.business
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "character_table")
 data class CharacterModel(
-    val info: CharacterInfoModel,
-    val results: List<CharacterResultModel>
+    @ColumnInfo(name = "info_model") val info: CharacterInfoModel,
+    @ColumnInfo(name = "results") val results: List<CharacterResultModel>,
+    @ColumnInfo(name = "page_index") val pageIndex: String,
+    @PrimaryKey(autoGenerate = true) val id: Int? = null
 )
 
 data class CharacterInfoModel(

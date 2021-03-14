@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion compile_sdk_version
 
@@ -28,6 +30,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
     }
 }
 
@@ -58,6 +64,10 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$coroutines_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$coroutines_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Room
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 
     testImplementation "junit:junit:$junit_version"
 

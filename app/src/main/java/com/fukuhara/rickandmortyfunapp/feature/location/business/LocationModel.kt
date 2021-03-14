@@ -1,8 +1,15 @@
 package com.fukuhara.rickandmortyfunapp.feature.location.business
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "location_table")
 data class LocationModel(
-   val info: LocationInfoModel,
-    val results: List<LocationResultModel>
+    @ColumnInfo(name = "info_model") val info: LocationInfoModel,
+    @ColumnInfo(name = "results") val results: List<LocationResultModel>,
+    @ColumnInfo(name = "page_index") val pageIndex: String,
+    @PrimaryKey(autoGenerate = true) val id: Int? = null
 )
 
 data class LocationInfoModel(

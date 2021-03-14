@@ -24,8 +24,10 @@ class CharacterCard(private val view: View) {
         view.findViewById<TextView>(R.id.ds_character_status).text = status
         view.findViewById<TextView>(R.id.ds_character_species).text = species
         view.findViewById<TextView>(R.id.ds_character_gender).text = gender
-        view.findViewById<TextView>(R.id.ds_character_origin).text = "    - $origin"
-        view.findViewById<TextView>(R.id.ds_character_location).text = "    - $location"
+        view.findViewById<TextView>(R.id.ds_character_origin).text =
+            view.resources.getString(R.string.ds_character_card_location_placeholder, origin)
+        view.findViewById<TextView>(R.id.ds_character_location).text =
+            view.resources.getString(R.string.ds_character_card_location_placeholder, location)
 
         if (type.isNotEmpty()) {
             typeTv.text = type

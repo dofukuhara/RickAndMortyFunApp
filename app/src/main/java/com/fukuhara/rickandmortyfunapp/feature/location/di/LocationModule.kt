@@ -24,6 +24,7 @@ object LocationModule {
         factory<LocationRepository> {
             LocationRepositoryImpl(
                 api = get(),
+                dao = get(),
                 modelMapper = get(named(MODEL_MAPPER_LOCATION)),
                 networkErrorHandler = get()
             )

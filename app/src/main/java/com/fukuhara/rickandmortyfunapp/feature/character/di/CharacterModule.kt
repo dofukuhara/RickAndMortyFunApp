@@ -24,6 +24,7 @@ object CharacterModule {
         factory<CharacterRepository> {
             CharacterRepositoryImpl(
                 api = get(),
+                dao = get(),
                 mapper = get(named(MODEL_MAPPER_CHARACTER)),
                 networkErrorHandler = get()
             )

@@ -7,7 +7,7 @@ import com.fukuhara.rickandmortyfunapp.feature.episode.business.EpisodeModel
 import com.fukuhara.rickandmortyfunapp.feature.episode.business.EpisodeResultModel
 
 class EpisodeModelMapper: ModelMapper<EpisodeVo, EpisodeModel> {
-    override fun transform(voData: EpisodeVo): EpisodeModel {
+    override fun transform(voData: EpisodeVo, pageIndex: String): EpisodeModel {
         val nextIndex = voData.info.next?.getPageIndex("episode")
         val previousIndex = voData.info.prev?.getPageIndex("episode")
 
@@ -29,6 +29,6 @@ class EpisodeModelMapper: ModelMapper<EpisodeVo, EpisodeModel> {
             )
         }
 
-        return EpisodeModel(episodeInfoModel, episodeResultModelList)
+        return EpisodeModel(episodeInfoModel, episodeResultModelList, pageIndex)
     }
 }

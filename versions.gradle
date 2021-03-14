@@ -22,6 +22,9 @@ ext{
     // Coroutines
     coroutines_version = "2.3.0"
 
+    // Room
+    room_version = "2.2.6"
+
     // External Libs - Retrofit (Network)
     retrofit2_version = "2.9.0"
     okhttp3_logging_version = "4.9.0"

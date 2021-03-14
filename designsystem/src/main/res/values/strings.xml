@@ -18,4 +18,5 @@
     <string name="ds_character_card_origin_label">"From: "</string>
     <string name="ds_character_card_location_label">"Last Known Location: "</string>
     <string name="ds_character_card_avatar_image_desc">Avatar image</string>
+    <string name="ds_character_card_location_placeholder"> "    - %1$s"</string>
 </resources>

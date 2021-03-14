@@ -9,7 +9,7 @@ import com.fukuhara.rickandmortyfunapp.feature.character.business.CharacterResul
 
 class CharacterModelMapper : ModelMapper<CharacterVo, CharacterModel> {
 
-    override fun transform(voData: CharacterVo): CharacterModel {
+    override fun transform(voData: CharacterVo, pageIndex: String): CharacterModel {
         val nextIndex = voData.info.next?.getPageIndex("character")
         val previousIndex = voData.info.prev?.getPageIndex("character")
 
@@ -28,6 +28,6 @@ class CharacterModelMapper : ModelMapper<CharacterVo, CharacterModel> {
             )
         }
 
-        return CharacterModel(characterInfoModel, characterResultModelList)
+        return CharacterModel(characterInfoModel, characterResultModelList, pageIndex)
     }
 }
