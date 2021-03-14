@@ -11,19 +11,21 @@ import com.fukuhara.rickandmortyfunapp.feature.episode.business.vo.EpisodeVo
 import com.fukuhara.rickandmortyfunapp.feature.episode.EpisodeViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.viewmodel.dsl.viewModel
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
 object EpisodeModule {
+    private const val MODEL_MAPPER_EPISODE = "EpisodeModelMapper"
 
     val instance = module {
 
         factory { get<RestClient>().getApi(EpisodeApi::class.java) }
-        factory<ModelMapper<EpisodeVo, EpisodeModel>> { EpisodeModelMapper() }
+        factory<ModelMapper<EpisodeVo, EpisodeModel>>(named(MODEL_MAPPER_EPISODE)) { EpisodeModelMapper() }
 
         factory<EpisodeRepository> {
             EpisodeRepositoryImpl(
                 api = get(),
-                modelMapper = get(),
+                modelMapper = get(named(MODEL_MAPPER_EPISODE)),
                 networkErrorHandler = get()
             )
         }

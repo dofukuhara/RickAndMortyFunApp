@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toStartOf="@+id/ds_pageindicator_page_info_text"
         app:layout_constraintVertical_chainStyle="spread"
         app:layout_constraintHorizontal_chainStyle="spread"
-        android:text="@string/ds_page_nagivator_previous_button_label"/>
+        android:text="@string/ds_page_navigator_previous_button_label"/>
 
     <TextView
         android:id="@+id/ds_pageindicator_page_info_text"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ds_pageindicator_page_info_text"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/ds_page_nagivator_next_button_label"/>
+        android:text="@string/ds_page_navigator_next_button_label"/>
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/ds_pageindicator_view_group"

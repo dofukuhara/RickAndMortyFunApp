@@ -16,7 +16,7 @@
         tools:layout="@layout/episode_fragment" />
     <fragment
         android:id="@+id/main_bottom_nav_item_location"
-        android:name="com.fukuhara.rickandmortyfunapp.PlaceholderFrag"
+        android:name="com.fukuhara.rickandmortyfunapp.feature.location.LocationFragment"
         android:label="@string/main_bottom_nav_location_item" />
 
 </navigation>

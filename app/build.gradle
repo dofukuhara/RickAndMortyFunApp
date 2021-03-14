@@ -57,6 +57,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$coroutines_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$coroutines_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$coroutines_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     testImplementation "junit:junit:$junit_version"
 
