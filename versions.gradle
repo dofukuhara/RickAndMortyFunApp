@@ -38,6 +38,18 @@ ext{
     // JUnit (Unit Test)
     junit_version = "4.13.2"
 
+    // MockK (Unit Test)
+    mockk_version = "1.10.6"
+
+    // Coroutines (Unit Test)
+    coroutines_test_version = "1.4.2"
+
+    // AndroidX Core Testing (Unit Test)
+    core_testing_version = "2.1.0"
+
+    // Gson converter (Unit Test)
+    gson_version = "2.8.6"
+
     // Instrumented Tests Dependencies
     androidtest_junit_version = "1.1.2"
     androidtest_espresso_version = "3.3.0"

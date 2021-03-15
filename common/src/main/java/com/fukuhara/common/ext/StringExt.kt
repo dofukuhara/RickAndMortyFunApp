@@ -17,7 +17,7 @@ fun String.getPageIndex(api: String): String? {
 }
 
 fun String.getSeasonAndEpisode(): Pair<String, String>? {
-    val regex = "S(\\d+)E(\\d+)"
+    val regex = "[sS](\\d+)[eE](\\d+)"
 
     val findWithRegex = Regex(regex).find(this)
     return findWithRegex?.run {

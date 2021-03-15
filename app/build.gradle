@@ -70,6 +70,10 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
 
     testImplementation "junit:junit:$junit_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
+    testImplementation "androidx.arch.core:core-testing:$core_testing_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_test_version"
+    testImplementation "com.google.code.gson:gson:$gson_version"
 
     androidTestImplementation "androidx.test.ext:junit:$androidtest_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidtest_espresso_version"
